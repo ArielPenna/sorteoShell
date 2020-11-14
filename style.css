@@ -44,11 +44,11 @@ form {
 }
 .logo {
   width: 45px;
-  height: 100px;
+  height: 89px;
 }
 .titulo {
-  width: 240px;
-  height: 110px;
+  width: 250px;
+  height: 96px;
 }
 .footer {
   position: relative;
@@ -58,7 +58,7 @@ form {
 }
 .moto {
   width: 200px;
-  height: 110px;
+  height: 124px;
   margin-top: 40px;
 }
 .wave {
