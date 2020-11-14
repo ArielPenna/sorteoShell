@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="tablet.css" media="(min-width: 930px)" />
+
+    <title>.:Sorteo Navideño 2020 - Shell Marcos Paz:.</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div id="contenido" class="header">
+      <img class="logo" src="/img/logo.png" alt="logo shell" />
+      <img class="titulo mt-1" src="/img/titulo.png" alt="promo" />
+    </div>
+    <div class="container mx-auto">
+      <table class="main Table">
+        <h3 class="text-center mt-2">Por favor complete los siguientes datos</h3>
+        <hr />
+        <form id="form1" name="form1" method="post">
+          <div class="form-group row">
+            <label for="numeroDeFactura" class="col-sm-4 col-form-label">Número de Factura</label>
+            <div class="col-sm-8">
+              <input type="number" class="form-control" id="numeroDeFactura" placeholder="ej: 0001-00001234" />
+              <small id="emailHelp" class="form-text text-muted">Ingrese el número de factura de su compra</small>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="chance" class="col-sm-4 col-form-label">Código de CHANCE</label>
+            <div class="col-sm-8">
+              <input type="number" class="form-control" id="chance" placeholder="ej: ZXYZXY" />
+              <small id="emailHelp" class="form-text text-muted">Ingrese el código de CHANCE en la factura</small>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="dni" class="col-sm-4 col-form-label">DNI</label>
+            <div class="col-sm-8">
+              <input type="number" class="form-control" id="dni" placeholder="ej: 25665887" />
+              <small id="emailHelp" class="form-text text-muted">Ingrese su numero de DNI</small>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="dniConfirm" class="col-sm-4 col-form-label">DNI (confirmacion)</label>
+            <div class="col-sm-8">
+              <input type="number" class="form-control" id="dniConfirm" placeholder="ej: 25665887" />
+              <small id="emailHelp" class="form-text text-muted">Ingrese su numero de DNI nuevamente</small>
+            </div>
+          </div>
+
+          <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+            <label class="form-check-label" for="exampleCheck1">Acepto bases y condiciones.</label>
+          </div>
+        </form>
+      </table>
+    </div>
+    <button type="submit" class="btn btn-warning d-block mx-auto px-4 font-weight-bold">Enviar</button>
+    <div class="footer">
+      <img class="moto" src="/img/moto.png" alt="moto" />
+    </div>
+    <img class="wave" src="/img/footer.png" alt="footer" />
+  </body>
+</html>
