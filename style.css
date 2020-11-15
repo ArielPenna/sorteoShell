@@ -9,7 +9,6 @@ html {
 }
 body {
   margin: 0 auto;
-  /* margin-bottom: 50px; */
   background-image: url('./img/fondo.jpg');
   background-size: cover;
   background-position: center;
@@ -22,7 +21,16 @@ body {
   width: 80%;
   min-width: 250px;
   max-width: 600px;
-  /* height: 100%; */
+  margin: 25px;
+  background-color: #ffffffcc;
+  border-radius: 10px;
+}
+.container-extras {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 250px;
+  max-width: 600px;
   margin: 25px;
   background-color: #ffffffcc;
   border-radius: 10px;
@@ -36,7 +44,6 @@ form {
   display: flex;
   flex-direction: column;
   width: 190px;
-  /* margin: 0 20px; */
 }
 .button {
   background-color: #f4d433;
@@ -64,4 +71,7 @@ form {
 .wave {
   width: 100%;
   height: auto;
+}
+.spacer {
+  margin: 220px;
 }
