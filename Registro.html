@@ -19,65 +19,65 @@
   </head>
   <body>
     <div id="contenido" class="header">
-      <img class="logo" src="/img/logo.png" alt="logo shell" />
-      <img class="titulo mt-1" src="/img/titulo.png" alt="promo" />
+      <img class="logo" src="./img/logo.png" alt="logo shell" />
+      <img class="titulo mt-1" src="./img/titulo.png" alt="promo" />
     </div>
     <div class="container mx-auto">
       <table class="main Table">
-        <h3 class="text-center mt-2">Alta de Participante</h3>
+        <h3 class="text-center mt-2">Alta de Participante - DNI <?= $dni ?></h3>
         <hr />
-        <form>
+        <form id="form1" name="form1" method="post">  
           <div class="form-row">
             <div class="form-group col-md-3">
               <label for="nombre">Nombre</label>
-              <input type="text" class="form-control" id="nombre" />
+              <input name="nombre" type="text" class="form-control" id="nombre" value="<?= $inputNombre ?>" />
             </div>
             <div class="form-group col-md-3">
               <label for="apellido">Apellido</label>
-              <input type="text" class="form-control" id="apellido" />
+              <input name="apellido" type="text" class="form-control" id="apellido" value="<?= $inputApellido ?>" />
             </div>
             <div class="form-group col-md-6">
               <label for="telefono">Telefono</label>
-              <input type="number" class="form-control" id="telefono" />
+              <input name="telefono" type="number" class="form-control" id="telefono" value="<?= $inputTelefono ?>" />
             </div>
             <div class="form-group col-md-6">
               <label for="nacimiento">Fecha de Nacimiento</label>
-              <input type="date" class="form-control" value="2020-11-16" max="2002-11-16" id="nacimiento" />
+              <input name="nacimiento" type="date" class="form-control" max="2002-11-16" id="nacimiento" value="<?= $inputNacimiento ?>" />
             </div>
 
             <div class="form-group col-md-6">
               <label for="sexo">Sexo</label>
-              <select id="sexo" class="form-control">
-                <option selected>Elegir</option>
-                <option>Sin Declarar</option>
-                <option>Masculino</option>
-                <option>Femenino</option>
+              <select name="sexo" id="sexo" class="form-control">                
+                <option <?php if ($inputSexo == "Sin Declarar") echo "selected" ?> >Sin Declarar</option>
+                <option <?php if ($inputSexo == "Masculino") echo "selected" ?> >Masculino</option>
+                <option <?php if ($inputSexo == "Femenino") echo "selected" ?> >Femenino</option>
               </select>
             </div>
             <div class="form-group col-md-6">
               <label for="email">Email</label>
-              <input type="text" class="form-control" id="email" />
+              <input name="email" type="text" class="form-control" id="email" value="<?= $inputEmail ?>" />
             </div>
             <div class="form-group col-md-6">
               <label for="direccion">Direccion</label>
-              <input type="text" class="form-control" id="direccion" />
+              <input name="direccion" type="text" class="form-control" id="direccion" value="<?= $inputDireccion ?>" />
             </div>
             <div class="form-group col-md-6">
               <label for="localidad">Localidad</label>
-              <input type="text" class="form-control" id="localidad" />
+              <input name="localidad" type="text" class="form-control" id="localidad" value="<?= $inputLocalidad ?>" />
             </div>
             <div class="form-group col-md-6">
               <label for="provincia">Provincia</label>
-              <input type="text" class="form-control" id="provincia" />
+              <input name="provincia" type="text" class="form-control" id="provincia" value="<?= $inputProvincia ?>" />
             </div>
           </div>
+			<input type="hidden" name="submit" value="submit" />
         </form>
       </table>
     </div>
-    <button type="submit" class="btn btn-warning d-block mx-auto px-4 font-weight-bold">Enviar</button>
+    <button form="form1" type="submit" class="btn btn-warning d-block mx-auto px-4 font-weight-bold">Enviar</button>
     <div class="footer">
-      <img class="moto" src="/img/moto.png" alt="moto" />
+      <img class="moto" src="./img/moto.png" alt="moto" />
     </div>
-    <img class="wave" src="/img/footer.png" alt="footer" />
+    <img class="wave" src="./img/footer.png" alt="footer" />
   </body>
 </html>

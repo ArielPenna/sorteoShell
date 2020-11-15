@@ -21,54 +21,63 @@
   </head>
   <body>
     <div id="contenido" class="header">
-      <img class="logo" src="/img/logo.png" alt="logo shell" />
-      <img class="titulo mt-1" src="/img/titulo.png" alt="promo" />
+      <img class="logo" src="./img/logo.png" alt="logo shell" />
+      <img class="titulo mt-1" src="./img/titulo.png" alt="promo" />
     </div>
+
     <div class="container mx-auto">
       <table class="main Table">
-        <h3 class="text-center mt-2">Por favor complete los siguientes datos</h3>
-        <hr />
         <form id="form1" name="form1" method="post">
+          <h3 class="text-center mt-2">Por favor complete los siguientes datos</h3>
+          <hr />
+          <?php if (!$inputQR):?>
           <div class="form-group row">
             <label for="numeroDeFactura" class="col-sm-4 col-form-label">Número de Factura</label>
             <div class="col-sm-8">
-              <input type="number" class="form-control" id="numeroDeFactura" placeholder="ej: 0001-00001234" />
+              <input name="numeroDeFactura" type="text" class="form-control" id="numeroDeFactura" placeholder="ej: 0001-00001234" value="<?= $inputFactura ?>" />
               <small id="emailHelp" class="form-text text-muted">Ingrese el número de factura de su compra</small>
             </div>
           </div>
           <div class="form-group row">
-            <label for="chance" class="col-sm-4 col-form-label">Código de CHANCE</label>
+            <label for="numeroDeChance" class="col-sm-4 col-form-label">Código de CHANCE</label>
             <div class="col-sm-8">
-              <input type="number" class="form-control" id="chance" placeholder="ej: ZXYZXY" />
+              <input name="numeroDeChance" type="text" class="form-control" id="numeroDeChance" placeholder="ej: ZXYZXY" value="<?= $inputChance ?>" />
               <small id="emailHelp" class="form-text text-muted">Ingrese el código de CHANCE en la factura</small>
             </div>
           </div>
+          <?php else:?>
+          <input type="hidden" name="factura" id="factura" value="<?= $inputFactura ?>" />
+          <input type="hidden" name="chance" id="chance" value="<?= $inputChance ?>" />
+          <?php endif;?>
           <div class="form-group row">
             <label for="dni" class="col-sm-4 col-form-label">DNI</label>
             <div class="col-sm-8">
-              <input type="number" class="form-control" id="dni" placeholder="ej: 25665887" />
+              <input name="dni" type="number" class="form-control" id="dni" placeholder="ej: 25665887" value="<?= $inputDni ?>" />
               <small id="emailHelp" class="form-text text-muted">Ingrese su numero de DNI</small>
             </div>
           </div>
           <div class="form-group row">
             <label for="dniConfirm" class="col-sm-4 col-form-label">DNI (confirmacion)</label>
             <div class="col-sm-8">
-              <input type="number" class="form-control" id="dniConfirm" placeholder="ej: 25665887" />
+              <input name="dniConfirm" type="number" class="form-control" id="dniConfirm" placeholder="ej: 25665887" value="<?= $inputCdni ?>" />
               <small id="emailHelp" class="form-text text-muted">Ingrese su numero de DNI nuevamente</small>
             </div>
           </div>
 
           <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-            <label class="form-check-label" for="exampleCheck1">Acepto bases y condiciones.</label>
+            <input name="bases" type="checkbox" class="form-check-input" id="exampleCheck1" value="acepto" />
+            <label class="form-check-label" for="exampleCheck1">Acepto&nbsp;</label><a href="Bases.html">bases y condiciones.</a>
           </div>
+          <input type="hidden" name="submit" value="Envio" />
+          <input type="hidden" name="qr" id="qr" value="<?= $inputQR ?>" />
         </form>
       </table>
     </div>
-    <button type="submit" class="btn btn-warning d-block mx-auto px-4 font-weight-bold">Enviar</button>
+    <button form="form1" type="submit" class="btn btn-warning d-block mx-auto px-4 font-weight-bold" value="enviado">Enviar</button>
+
     <div class="footer">
-      <img class="moto" src="/img/moto.png" alt="moto" />
+      <img class="moto" src="./img/moto.png" alt="moto" />
     </div>
-    <img class="wave" src="/img/footer.png" alt="footer" />
+    <img class="wave" src="./img/footer.png" alt="footer" />
   </body>
 </html>
